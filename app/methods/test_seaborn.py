@@ -31,7 +31,7 @@ def basic_seaborn():
     plt.show()
 
 
-def adv_seaborn_1(data):
+def adv_seaborn_1(data, df):
     x = np.random.rand(50)
     y = x * 2 + np.random.normal(0, 0.1, 50)
 
@@ -49,7 +49,7 @@ def adv_seaborn_1(data):
     plt.ylabel("Частота")
 
     plt.subplot(223)
-    sns.barplot(x=data[4], y=data[5])
+    sns.barplot(x=df["Сезон"], y=df["Прибыль"])
     plt.title("Столбчатая диаграмма", fontsize=14)
     plt.xlabel("Категории")
     plt.ylabel("Значения")
