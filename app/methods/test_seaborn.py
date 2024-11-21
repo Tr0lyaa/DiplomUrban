@@ -52,21 +52,21 @@ def adv_seaborn_1(data, df):
 
 
 def adv_seaborn_2(data):
-    data = np.random.normal(0, 1, 100)
+    data1 = np.random.normal(0, 1, 100)
 
     plt.figure(figsize=(9, 9))
     plt.subplot(221)
-    sns.boxplot(data=data, color="skyblue")
+    sns.boxplot(data=data1, color="skyblue")
     plt.title("Диаграмма размаха", fontsize=14)
 
-    data = np.random.rand(10, 10)
+    data2 = np.random.rand(10, 10)
     plt.subplot(222)
-    sns.heatmap(data, cmap="coolwarm", annot=True, fmt=".2f")
+    sns.heatmap(data2, cmap="coolwarm", annot=True, fmt=".2f")
     plt.title("Тепловая карта", fontsize=14)
 
     plt.subplot(223)
     sns.lineplot(x=data[0], y=data[1], color="blue", label="sin(x)")
-    plt.fill_between(data[0], data[1], color="lightblue", alpha=0.5)
+    plt.fill_between(data[0], data[1], color="lightblue")
     plt.title("Областной график", fontsize=14)
     plt.xlabel("X")
     plt.ylabel("Y")
