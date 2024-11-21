@@ -28,7 +28,7 @@ while test_number != "0":
         adv_plot_2(data2)
         test_number = input(input_text)
     elif test_number == "2":
-        basic_seaborn()
+        basic_seaborn(data2)
         adv_seaborn_1(data2, df1)
         adv_seaborn_2(data2)
         test_number = input(input_text)

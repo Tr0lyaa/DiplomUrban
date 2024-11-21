@@ -1,20 +1,15 @@
 import seaborn as sns
-import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
 
-def basic_seaborn():
-    x = np.linspace(0, 10, 100)
-    y1 = np.sin(x)
-    y2 = np.cos(x)
-
+def basic_seaborn(data):
     plt.figure(figsize=(8, 4))
 
     sns.set_style('darkgrid')
-    sns.lineplot(x=x, y=y1, label='sin(x)', color='blue')
-    sns.lineplot(x=x, y=y2, label='cos(x)', color='orange')
-    plt.title(f"Линейный график в стиле '{"darkgrid"}'", fontsize=14)
+    sns.lineplot(x=data[0], y=data[1], label='sin(x)', color='blue')
+    sns.lineplot(x=data[0], y=data[3], label='cos(x)', color='orange')
+    plt.title(f"Линейный график в стиле 'darkgrid'", fontsize=14)
     plt.xlabel("X")
     plt.ylabel("Y")
     plt.legend()
@@ -22,9 +17,9 @@ def basic_seaborn():
 
     plt.figure(figsize=(8, 4))
     sns.set_style('ticks')
-    sns.lineplot(x=x, y=y1, label='sin(x)', color='blue')
-    sns.lineplot(x=x, y=y2, label='cos(x)', color='orange')
-    plt.title(f"Линейный график в стиле '{"ticks"}'", fontsize=14)
+    sns.lineplot(x=data[0], y=data[1], label='sin(x)', color='blue')
+    sns.lineplot(x=data[0], y=data[3], label='cos(x)', color='orange')
+    plt.title(f"Линейный график в стиле 'ticks'", fontsize=14)
     plt.xlabel("X")
     plt.ylabel("Y")
     plt.legend()
